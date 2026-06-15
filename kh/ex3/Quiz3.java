@@ -7,9 +7,9 @@ public class Quiz3 {
 		System.out.print("나이 : ");
 		int age = sc.nextInt();
 		System.out.print("키 : ");
-		double cm = sc.nextFloat();
+		double cm = sc.nextDouble();
 		
-		String result = (age < 12 || cm < 130) ? "보호자 동반 필수" : "단독 탑승 가능";
+		String result = (age < 12 || cm < 130.0) ? "보호자 동반 필수" : "단독 탑승 가능";
 		
 		System.out.println("나이 : " + age);
 		System.out.println("키 : " + cm);
