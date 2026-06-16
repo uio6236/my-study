@@ -4,16 +4,21 @@ public class Quiz3 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("나이 : ");
-		int age = sc.nextInt();
-		System.out.print("키 : ");
-		double cm = sc.nextDouble();
-		
-		String result = (age < 12 || cm < 130.0) ? "보호자 동반 필수" : "단독 탑승 가능";
-		
-		System.out.println("나이 : " + age);
-		System.out.println("키 : " + cm);
-		System.out.println(result);
+		System.out.print("점수를 입력하세요(0~100) : ");
+		int num = sc.nextInt();
+		if (num >= 0 && num <= 100) {
+			if (num >= 90) {
+				System.out.print("A");
+			} else if (num >= 80) {
+				System.out.print("B");
+			} else if (num >= 70) {
+				System.out.print("C");
+			} else {
+				System.out.print("F");
+			}
+		} else {
+			System.out.print("점수를 올바르게 입력해주세요.");
+		}
 		sc.close();
 	}
 
