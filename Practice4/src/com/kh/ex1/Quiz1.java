@@ -21,7 +21,7 @@ public class Quiz1 {
 			System.out.print("삭제 메뉴입니다.");
 			break;
 		case 7:
-			System.out.print("종료 메뉴입니다.");
+			System.out.print("프로그램을 종료합니다.");
 			break;
 		default :
 			System.out.print("잘못된 메뉴 번호입니다.");
