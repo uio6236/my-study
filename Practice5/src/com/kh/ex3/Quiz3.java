@@ -7,8 +7,8 @@ public class Quiz3 {
 		int n1 = sc.nextInt();
 		System.out.print("두 번째 숫자 : ");
 		int n2 = sc.nextInt();
-		
-		if (n1 < n2) {
+		/*
+		   if (n1 < n2) {
 			for(int i = n1; i <= n2; i++) {
 				if (n1 < 1 || n2 < 1) {
 					System.out.print("1 이상의 숫자를 입력해주세요.");
@@ -25,6 +25,17 @@ public class Quiz3 {
 				System.out.print(i + " ");
 			}
 		}
+		 */
+		if (n1 >= 1 && n2 >= 1) {
+			int max = (n1 > n2) ? n1 : n2;
+			int min = (n1 < n2) ? n1 : n2;
+			for(int i = min; i <= max; i++) {
+				System.out.print(i + " ");
+			}
+		} else {
+			System.out.print("1 이상의 숫자를 입력해주세요.");
+		}
+		
 		sc.close();
 	}
 }
