@@ -32,6 +32,19 @@ public class B_ArrayFeatures {
 		System.out.println(dArr);
 		// => 배열의 자료형 + @ + 주소값(16진수)
 		int[] arr = null;
+		
+		/*
+		 * System.out.println(arr[0]);
+		 *  => null[0] -> NullPointerException 오류 발생!
+		 *  	실제 데이터가 없는 데 첫번째 칸의 데이터로 접근하려고 함!
+		 */
+		arr = new int[5];
+		System.out.println(arr[4]);
+		/* s
+		 * System.out.println(arr[5]);
+		 * ArrayIndexOutOfBoundsException 오류 발생!
+		 * 	인덱스 범위를 벗어났기 때문에 오류가 발생! 반복문 사용 시 자주 접함!
+ 		 */
 	}
 
 }
