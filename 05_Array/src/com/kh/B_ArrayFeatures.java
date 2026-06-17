@@ -45,6 +45,10 @@ public class B_ArrayFeatures {
 		 * ArrayIndexOutOfBoundsException 오류 발생!
 		 * 	인덱스 범위를 벗어났기 때문에 오류가 발생! 반복문 사용 시 자주 접함!
  		 */
+		System.out.println("재할당 전 : " + arr);
+		// --- 재할당 -> 배열을 새로 생성해서 할당
+		arr = new int[7];
+		System.out.println("재할당 후 : " + arr);
 	}
 
 }
