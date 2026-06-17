@@ -55,11 +55,34 @@ public class C_ArrayCopy {
 		for(int i=0; i < origin.length; i++) {
 			copy[i] = origin[i];
 		}
+		origin[0] = 999;
 		System.out.println(" === 복사 후 copy 배열 === ");
 		for(int a : copy) {
 			System.out.print(a + " ");
 		}
 		System.out.println();
+		System.out.println(" ==== 원본 배열 출력 ==== ");
+		for(int i : origin) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		// ----------------------------
+		// System.arraycopy(원본배열명, 복사를시작할인덱스,
+		//					복사본배열명, 복사본배열의시작인덱스, 복사할개수);
+		// System.arraycopy(origin, 0, copy, 0, origin.length);
+		// => 원본 배열의 처음 위치부터 복사본 배열에서도 첫번째 위치에
+		//		원본 배열 크기만큼 데이터를 복사
+		
+		copy = new int[10];
+		// 원본 데이터 => [999, 2, 3, 4, 5]
+		// 복사 후 데이터 => [0, 0, 0, 0, 3, 4, 5, 0, 0, 0]
+		System.arraycopy(origin, 2, copy, 4, 3);
+		
+		System.out.println(" ===== arraycopy 로 복사 ===== ");
+		for(int n : copy) {
+			System.out.print(n + " ");
+		}
+		
 	}
 
 }
