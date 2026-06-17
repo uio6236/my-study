@@ -30,7 +30,8 @@ public class B_ArrayFeatures {
 		System.out.println("--------------------");
 		System.out.println(iArr);
 		System.out.println(dArr);
-
+		// => 배열의 자료형 + @ + 주소값(16진수)
+		int[] arr = null;
 	}
 
 }
