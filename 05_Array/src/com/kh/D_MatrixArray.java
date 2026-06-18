@@ -27,7 +27,7 @@ public class D_MatrixArray {
 	 * 		자료형[][] 변수명 = { new 자료형[크기], new 자료형[크기], ... };
 	 */
 	public static void main(String[] args) {
-		method1();
+		method2();
 	}
 	public static void method1() {
 		// 정수형 2차원 배열 선언
@@ -62,6 +62,29 @@ public class D_MatrixArray {
 		
 	}
 	public static void method2() {
-		
+		/*
+		 * 아래 문자열 데이터를 저장할 2차원 배열을 선언 및 생성하고
+		 * 각 위치에 값을 대입해보자.
+		 * 
+		 * "(0행 0열)" "(0행 1열)" "(0행 2열)"
+		 * "(1행 0열)" "(1행 1열)" "(1행 2열)"
+		 * "(2행 0열)" "(2행 1열)" "(2행 2열)"
+		 * 
+		 * !! 체크 사항 !!
+		 * 1) 데이터가 어떤 타입인가? (자료형)
+		 * 2) 몇 개의 행이 필요한가? (패턴 분석)
+		 * 3) 한 행에 몇 개의 데이터를 저장할 것인가?
+		 */
+		String[][] arr = new String[3][3];
+		for(int i = 0; i < arr[0].length; i++) {
+			for(int j = 0; j < arr[i].length; j++)
+				arr[i][j] = "(" + i +"행 " + j + "열)";
+		}
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
 	}
 }
