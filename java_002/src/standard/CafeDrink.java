@@ -28,7 +28,7 @@ public class CafeDrink {
     public void setIsIce(boolean isIce) {this.isIce = isIce;}
     public void setShot(int shot) {this.shot = shot;}
 
-    public void printInfo() {
+    public void printMenu() {
         System.out.println("메뉴 이름: " + menuName);
         System.out.println("가격: " + price + "원");
         System.out.println("사이즈: " + size);

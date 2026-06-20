@@ -6,10 +6,10 @@ public class Run {
         CafeDrink cafeDrink2 = new CafeDrink("카페 라떼", 5000, "Grande", false, 2);
         CafeDrink drink1 = new CafeDrink("레몬에이드", 5000, "Tall", true, 0);
 
-        cafeDrink1.printInfo();
+        cafeDrink1.printMenu();
         System.out.println();
-        cafeDrink2.printInfo();
+        cafeDrink2.printMenu();
         System.out.println();
-        drink1.printInfo();
+        drink1.printMenu();
     }
 }
