@@ -1,5 +1,4 @@
 package com.fish.run;
-
 import com.fish.view.FishView;
 
 public class Run {

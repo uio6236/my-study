@@ -29,7 +29,7 @@ public class FishInfo {
 
 	@Override
 	public String toString() {
-		return name + ", " + season + ", " + habitat + ", " + bait + ", " + releaseSize;
+		return name + "," + season + "," + habitat + "," + bait + "," + releaseSize;
 	}
 	public void fishInfoPrint() {
 		System.out.printf("물고기 이름 : %s\n 낚시 시즌 : %s\n 주서식지 : %s\n 추천 미끼 : %s\n 방생 기준 : %dcm",
