@@ -8,7 +8,6 @@ public class FishInfo {
 	private int releaseSize;
 	
 	public FishInfo() {}
-
 	public FishInfo(String name, String season, String habitat, String bait, int releaseSize) {
 		this.name = name;
 		this.season = season;
@@ -17,45 +16,16 @@ public class FishInfo {
 		this.releaseSize = releaseSize;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getSeason() {
-		return season;
-	}
-
-	public void setSeason(String season) {
-		this.season = season;
-	}
-
-	public String getHabitat() {
-		return habitat;
-	}
-
-	public void setHabitat(String habitat) {
-		this.habitat = habitat;
-	}
-
-	public String getBait() {
-		return bait;
-	}
-
-	public void setBait(String bait) {
-		this.bait = bait;
-	}
-
-	public int getReleaseSize() {
-		return releaseSize;
-	}
-
-	public void setReleaseSize(int releaseSize) {
-		this.releaseSize = releaseSize;
-	}
+	public String getName() {return name;}
+	public void setName(String name) {this.name = name;}
+	public String getSeason() {return season;}
+	public void setSeason(String season) {this.season = season;}
+	public String getHabitat() {return habitat;}
+	public void setHabitat(String habitat) {this.habitat = habitat;}
+	public String getBait() {return bait;}
+	public void setBait(String bait) {this.bait = bait;}
+	public int getReleaseSize() {return releaseSize;}
+	public void setReleaseSize(int releaseSize) {this.releaseSize = releaseSize;}
 
 	@Override
 	public String toString() {
