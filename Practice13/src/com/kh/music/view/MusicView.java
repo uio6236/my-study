@@ -19,7 +19,8 @@ public class MusicView {
 					+ "6. 특정 곡 수정\r\n"
 					+ "7. 곡명 오름차순 정렬\r\n"
 					+ "8. 가수 명 내림차순 정렬\r\n"
-					+ "9. 종료");
+					+ "9. 종료\r\n"
+					+ "0. 파일 저장");
 			System.out.print("메뉴 번호 입력 : ");
 			int num = sc.nextInt();
 			sc.nextLine();
@@ -51,6 +52,9 @@ public class MusicView {
 			case 9:
 				System.out.println("프로그램 종료");
 				return;
+			case 0:
+				fileSave();
+				break;
 			default:
 				System.out.println("잘못 선택하였습니다.");
 				break;
@@ -122,5 +126,12 @@ public class MusicView {
 		int result = mc.descSinger();
 		if(result == 1) {System.out.println("정렬 성공");}
 		else {System.out.println("정렬 실패");}
+	}
+	private void fileSave() {
+		// 컨트롤러에게 파일 저장을 요청하고
+		// 결과에 따라 "완료", "실패" 출력
+		if (mc.fileSave() == 1) {System.out.println("저장 완료");}
+		else {System.out.println("저장 실패");}
+		
 	}
 }
