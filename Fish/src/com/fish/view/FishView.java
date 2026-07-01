@@ -62,6 +62,10 @@ public class FishView {
 			System.out.println("이미 있는 물고기 정보입니다.");
 			return;
 		}
+		if(!name.matches("^[a-zA-Z가-힣\\s]+$")) {
+            System.out.println("숫자가 포함된 물고기 이름은 입력할 수 없습니다.");
+            return;
+        }
 		System.out.print("낚시 시즌(월, 계절) : ");
 		String season = sc.nextLine();
 		System.out.print("주서식지(지역/지역/...) : ");
@@ -104,6 +108,10 @@ public class FishView {
 		System.out.println("새로운 정보를 입력하세요.");
 		System.out.print("물고기 이름 : ");
 		String newName = sc.nextLine();
+		if(!newName.matches("^[a-zA-Z가-힣\\s]+$")) {
+            System.out.println("숫자가 포함된 물고기 이름은 입력할 수 없습니다.");
+            return;
+        }
 		System.out.print("낚시 시즌(월, 계절) : ");
 		String season = sc.nextLine();
 		System.out.print("주서식지(지역/지역/...) : ");
