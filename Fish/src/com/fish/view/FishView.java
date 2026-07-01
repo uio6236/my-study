@@ -10,15 +10,15 @@ public class FishView {
 	
 	public void mainMenu() {
 		while(true) {
-			System.out.println("======물고기 정보 관리 프로그램======");
-			System.out.println("1. 물고기 정보 추가");
-			System.out.println("2. 물고기 정보 조회");
-			System.out.println("3. 물고기 이름 검색");
-			System.out.println("4. 물고기 정보 수정");
-			System.out.println("5. 물고기 정보 삭제");
-			System.out.println("6. 파일 저장");
-			System.out.println("7. 파일 불러오기");
-			System.out.println("9. 프로그램 종료");
+			System.out.println("======물고기 정보 관리 프로그램======\r\n"
+					+ "1. 물고기 정보 추가\r\n"
+					+ "2. 물고기 정보 조회\r\n"
+					+ "3. 물고기 이름 검색\r\n"
+					+ "4. 물고기 정보 수정\r\n"
+					+ "5. 물고기 정보 삭제\r\n"
+					+ "6. 파일 저장\r\n"
+					+ "7. 파일 불러오기\r\n"
+					+ "9. 프로그램 종료");
 			System.out.print("메뉴 번호 : ");
 			int menu = sc.nextInt();
 			sc.nextLine();
@@ -57,11 +57,16 @@ public class FishView {
 		System.out.println("===== 물고기 정보 추가 =====");
 		System.out.print("물고기 이름 : ");
 		String name = sc.nextLine();
-		System.out.print("낚시 시즌 : ");
+		FishInfo testFish = fc.searchFish(name);
+		if(testFish != null) {
+			System.out.println("이미 있는 물고기 정보입니다.");
+			return;
+		}
+		System.out.print("낚시 시즌(월, 계절) : ");
 		String season = sc.nextLine();
-		System.out.print("주서식지 : ");
+		System.out.print("주서식지(지역/지역/...) : ");
 		String habitat = sc.nextLine();
-		System.out.print("추천 미끼 : ");
+		System.out.print("추천 미끼(미끼/미끼/...) : ");
 		String bait = sc.nextLine();
 		System.out.print("방생 기준 크기(cm) : ");
 		int releaseSize = sc.nextInt();
@@ -99,11 +104,11 @@ public class FishView {
 		System.out.println("새로운 정보를 입력하세요.");
 		System.out.print("물고기 이름 : ");
 		String newName = sc.nextLine();
-		System.out.print("낚시 시즌 : ");
+		System.out.print("낚시 시즌(월, 계절) : ");
 		String season = sc.nextLine();
-		System.out.print("주서식지 : ");
+		System.out.print("주서식지(지역/지역/...) : ");
 		String habitat = sc.nextLine();
-		System.out.print("추천 미끼 : ");
+		System.out.print("추천 미끼(미끼/미끼/...) : ");
 		String bait = sc.nextLine();
 		System.out.print("방생 기준 크기(cm) : ");
 		int releaseSize = sc.nextInt();
@@ -119,11 +124,13 @@ public class FishView {
 		else {System.out.println("해당 물고기 정보가 없습니다.");}
 	}
 	public void fileSave() {
-		fc.saveFile();
-		System.out.println("파일 저장이 완료되었습니다.");
-	}
-	public void fileOpen() {
-		fc.openFile();
-		System.out.println("파일 불러오기가 완료되었습니다.");
-	}
+        System.out.print("파일 명: ");
+        String fileName = sc.nextLine() + ".txt";
+        fc.saveFile(fileName);
+    }
+    public void fileOpen() {
+        System.out.print("파일 명: ");
+        String fileName = sc.nextLine() + ".txt";
+        fc.openFile(fileName);
+    }
 }
