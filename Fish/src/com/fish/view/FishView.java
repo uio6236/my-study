@@ -72,9 +72,8 @@ public class FishView {
 	public void fishList() {
 		System.out.println("===== 전체 물고기 정보 조회 =====");
 		ArrayList<FishInfo> list = fc.getFishList();
-		if(list.isEmpty()) {
-			System.out.println("등록된 물고기 정보가 없습니다.");
-		} else {
+		if(list.isEmpty()) {System.out.println("등록된 물고기 정보가 없습니다.");}
+		else {
 			for(FishInfo fish : list) {
 				fish.fishInfoPrint();
 				System.out.println("--------------------");
@@ -86,11 +85,8 @@ public class FishView {
 		System.out.print("검색할 물고기 이름 : ");
 		String name = sc.nextLine();
 		FishInfo fish = fc.searchFish(name);
-		if(fish == null) {
-			System.out.println("검색 결과가 없습니다.");
-		} else {
-			fish.fishInfoPrint();
-		}
+		if(fish == null) {System.out.println("검색 결과가 없습니다.");}
+		else {fish.fishInfoPrint();}
 	}
 	public void fishEdit() {
 		System.out.println("===== 물고기 정보 수정 =====");
@@ -112,21 +108,15 @@ public class FishView {
 		System.out.print("방생 기준 크기(cm) : ");
 		int releaseSize = sc.nextInt();
 		FishInfo fish = new FishInfo(newName, season, habitat, bait, releaseSize);
-		if(fc.editFish(name, fish)) {
-			System.out.println("물고기 정보가 수정되었습니다.");
-		} else {
-			System.out.println("물고기 정보 수정에 실패했습니다.");
-		}
+		if(fc.editFish(name, fish)) {System.out.println("물고기 정보가 수정되었습니다.");} 
+		else {System.out.println("물고기 정보 수정에 실패했습니다.");}
 	}
 	public void fishDelete() {
 		System.out.println("===== 물고기 정보 삭제 =====");
 		System.out.print("삭제할 물고기 이름 : ");
 		String name = sc.nextLine();
-		if(fc.deleteFish(name)) {
-			System.out.println("물고기 정보가 삭제되었습니다.");
-		} else {
-			System.out.println("해당 물고기 정보가 없습니다.");
-		}
+		if(fc.deleteFish(name)) {System.out.println("물고기 정보가 삭제되었습니다.");} 
+		else {System.out.println("해당 물고기 정보가 없습니다.");}
 	}
 	public void fileSave() {
 		fc.saveFile();
